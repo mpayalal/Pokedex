@@ -1,16 +1,20 @@
 const express = require('express');
 const PokeneaController = require('./PokeneaController');
-const app = express();
-const port = 3000;
 
-//Set the view engine to EJS
-app.set('view engine', 'ejs');
+class Routes{
+    
+    static main(){
 
-//Routes of the project
-app.get('/', PokeneaController.index);
-app.get('/show', PokeneaController.show);
+        const router = express.Router();
+        
+        //Routes of the project
+        router.get('/', PokeneaController.index);
+        router.get('/show', PokeneaController.show);
 
-//Debug
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-});
+        return router;
+
+    }
+    
+}
+
+module.exports = Routes;
