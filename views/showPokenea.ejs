@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show Pokenea</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Ver Pokenea</title>
 </head>
 <body>
-    <img src="<%= image %>" alt="Foto del pokenea">
-    <p><%= phrase %></p>
-    <p>Container Id: <%= containerId %></p>
+    <div class="text-center mt-3">
+        <h3 class="display-4"><strong>¡Parcero, tu pokenea ha llegado, conócelo!</strong></h3>
+    </div>
+    <div class="mt-4">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="card text-center bg-primary-subtle w-25 h-25">
+                <img class="card-img-top" src="<%= image %>" alt="Foto del pokenea">
+                <div class="card-body">
+                    <p class="card-text"><%= phrase %></p>
+                    <p><strong>ID del contenedor: </strong><%= containerId %></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
